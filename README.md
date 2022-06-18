@@ -70,13 +70,13 @@ python start_tlgbotcore.py
 * создание образа контейнера
 
 ```buildoutcfg
-docker build -t tlgcore .  
+docker build -t tlgtatartranslate .  
 ```
 
 * запуск
 
 ```bash
-docker run --rm   -v "/home/oilnur/prj/prj-py/py-tlgbot-translate-tatar/cfg/config_dairy.py:/home/app/cfg/config_dairy.py" -v "/home/oilnur/prj/prj-py/py-tlgbot-translate-tatar/cfg/config_tlg.py:/home/app/cfg/config_tlg.py" -v "/home/oilnur/prj/prj-py/py-tlgbot-translate-tatar/settings.db:/home/app/settings.db" tlgcore
+docker run --rm   -v "/home/oilnur/prj/prj-py/py-tlgbot-translate-tatar/cfg/config_dairy.py:/home/app/cfg/config_dairy.py" -v "/home/oilnur/prj/prj-py/py-tlgbot-translate-tatar/cfg/config_tlg.py:/home/app/cfg/config_tlg.py" -v "/home/oilnur/prj/prj-py/py-tlgbot-translate-tatar/settings.db:/home/app/settings.db" tlgtatartranslate
 ```
 
 
