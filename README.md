@@ -73,10 +73,16 @@ python start_tlgbotcore.py
 docker build -t tlgtatartranslate .  
 ```
 
-* запуск
+* запуск для тестирования и проверки работоспособности
 
 ```bash
-docker run --rm   -v "/home/oilnur/prj/prj-py/py-tlgbot-translate-tatar/cfg/config_dairy.py:/home/app/cfg/config_dairy.py" -v "/home/oilnur/prj/prj-py/py-tlgbot-translate-tatar/cfg/config_tlg.py:/home/app/cfg/config_tlg.py" -v "/home/oilnur/prj/prj-py/py-tlgbot-translate-tatar/settings.db:/home/app/settings.db" tlgtatartranslate
+docker run --rm  -v "/home/oilnur/apps/py-tlgbot-translate-tatar/cfg/config_tlg.py:/home/app/cfg/config_tlg.py" -v "/home/oilnur/apps/py-tlgbot-translate-tatar/settings.db:/home/app/settings.db" tlgtatartranslate
+```
+
+* заупск для использования как сервиса который будет перезапускаться при необходимости
+
+```bash
+docker run -d --restart=always  -v "/home/oilnur/apps/py-tlgbot-translate-tatar/cfg/config_tlg.py:/home/app/cfg/config_tlg.py" -v "/home/oilnur/apps/py-tlgbot-translate-tatar/settings.db:/home/app/settings.db" tlgtatartranslate
 ```
 
 
